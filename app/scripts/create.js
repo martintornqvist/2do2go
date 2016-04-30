@@ -1,5 +1,5 @@
-todoTogo.controller('createController', ['$scope', '$firebaseArray', '$location', '$firebaseObject', 'ngDialog',
-      function($scope, $firebaseArray, $location, $firebaseObject, ngDialog){
+todoTogo.controller('createController', ['$scope', '$firebaseArray', '$location', '$firebaseObject', 'ngDialog', '$rootScope',
+      function($scope, $firebaseArray, $location, $firebaseObject, ngDialog, $rootScope){
         // Add items to list
         var addItems = new Firebase('https://todotogo.firebaseio.com/lists/' + listUID);
 
@@ -44,6 +44,7 @@ todoTogo.controller('createController', ['$scope', '$firebaseArray', '$location'
 
         $scope.share = function(){
           var fb = new Firebase('https://todotogo.firebaseio.com/lists/' + listUID);
-          console.log('this is the link: ' + fb);
+          console.log('this is the complete link: ' + fb);
+          console.log('this is the UID for the list: ' + listUID);
         }
 }]);
