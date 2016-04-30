@@ -1,3 +1,411 @@
-* {
+html, body {
   width: 100%;
-  height: 100%; }
+  height: auto;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #cecece;
+  font-family: 'open sans', arial, serif; }
+
+a:hover {
+  text-decoration: none; }
+
+header {
+  padding: 0;
+  margin-top: 2%;
+  margin-left: 2%;
+  color: #f0efef; }
+  header img {
+    width: 100px;
+    height: auto; }
+
+#home-container {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: auto;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 10px 0px #414040;
+  -moz-box-shadow: 0px 5px 10px 0px #414040;
+  box-shadow: 0px 5px 10px 0px #414040;
+  padding: 20px;
+  border-radius: 3px; }
+  #home-container h3 {
+    color: #111; }
+
+#buttons {
+  padding-top: 10px;
+  margin: 35px; }
+
+.createButton {
+  background-color: #44c767;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 10px 40px;
+  text-decoration: none;
+  border-radius: 3px; }
+
+.createButton:hover {
+  background-color: #5cbf2a; }
+
+.signupButton {
+  background-color: #44c7c3;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 10px 35px;
+  text-decoration: none;
+  border-radius: 3px; }
+
+.signupButton:hover {
+  background-color: #2a9bbf; }
+
+.info-text {
+  margin: 20px;
+  color: #cecece; }
+
+.bold {
+  font-weight: 700; }
+
+#home-list {
+  list-style-type: disc;
+  width: 50px;
+  margin: 0 auto; }
+  #home-list li {
+    text-align: left;
+    padding: 0;
+    border-bottom: 0; }
+
+.faqButton {
+  text-decoration: none;
+  color: #111; }
+  .faqButton:hover {
+    text-decoration: underline; }
+
+.faq-list {
+  text-align: left; }
+  .faq-list li {
+    border: 0; }
+    .faq-list li:hover {
+      background-color: white; }
+
+.homeButton {
+  text-decoration: none;
+  color: #111; }
+  .homeButton:hover {
+    text-decoration: underline; }
+
+#signup-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0 auto 50px;
+  padding-bottom: 30px;
+  width: 30%;
+  height: auto;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 10px 0px #414040;
+  -moz-box-shadow: 0px 5px 10px 0px #414040;
+  box-shadow: 0px 5px 10px 0px #414040;
+  border-radius: 3px; }
+  #signup-container h3 {
+    padding: 20px 5px;
+    text-align: center;
+    color: #cecece; }
+  #signup-container #buttons {
+    margin: 0; }
+    #signup-container #buttons .back-home {
+      float: right;
+      margin-right: 20px;
+      line-height: 40px;
+      color: black; }
+      #signup-container #buttons .back-home:hover {
+        text-decoration: underline; }
+
+#email, #name {
+  margin-bottom: 10px; }
+
+#buttons .signupButtonFinal {
+  margin-left: 20px;
+  background-color: #44c7c3;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 10px 35px;
+  text-decoration: none;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  border: 0; }
+  #buttons .signupButtonFinal:hover {
+    background-color: #2a9bbf; }
+
+input.ng-invalid.ng-touched {
+  border: 2px solid red; }
+
+input.ng-valid {
+  border: 2px solid green; }
+
+input[disabled="disabled"] {
+  opacity: 0.4;
+  cursor: not-allowed; }
+
+#signBlock {
+  width: 100%;
+  text-align: center;
+  color: red; }
+
+#create-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0 auto 50px;
+  padding-bottom: 30px;
+  width: 30%;
+  height: auto;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 10px 0px #414040;
+  -moz-box-shadow: 0px 5px 10px 0px #414040;
+  box-shadow: 0px 5px 10px 0px #414040;
+  border-radius: 3px; }
+  #create-container h3 {
+    padding: 20px 5px;
+    text-align: center;
+    color: #cecece; }
+  #create-container #buttons {
+    margin: 0; }
+    #create-container #buttons .back-home {
+      float: right;
+      margin-right: 20px;
+      color: black;
+      line-height: 40px; }
+      #create-container #buttons .back-home:hover {
+        text-decoration: underline; }
+
+#buttons .loginButtonFinal {
+  margin-left: 20px;
+  background-color: #44c767;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 10px 35px;
+  text-decoration: none;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  border: 0; }
+  #buttons .loginButtonFinal:hover {
+    background-color: #5cbf2a; }
+
+#item-container {
+  position: relative;
+  margin: 0 auto 50px;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 3px 3px 0 0; }
+  #item-container h3 {
+    padding: 20px 5px;
+    text-align: center;
+    color: #cecece; }
+
+.shareButton {
+  text-align: center;
+  margin-top: -10px;
+  margin-left: 20px;
+  width: 380px;
+  background-color: #44c7c3;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 10px 35px;
+  text-decoration: none;
+  border-radius: 0 0 3px 3px;
+  overflow: hidden;
+  position: fixed; }
+  .shareButton:hover {
+    background-color: #2a9bbf; }
+
+#mainForm {
+  text-align: center; }
+  #mainForm .input-group {
+    width: 90%;
+    margin: 0 auto; }
+
+ul {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none; }
+
+li {
+  color: #4d4d4d;
+  padding: 10px 0;
+  border-bottom: 1px solid #c2c2c2; }
+  li:last-child {
+    border-bottom: 0px solid transparent;
+    padding-bottom: 10px; }
+  li:hover {
+    background-color: rgba(231, 230, 243, 0.2); }
+
+ul li .edit {
+  display: none; }
+
+ul li.editing .view {
+  display: none; }
+
+ul li.editing .edit {
+  display: block;
+  width: 75%;
+  padding: 0 0 10px 10px;
+  border-radius: 3px;
+  border: 1px solid lightgrey; }
+
+input[type=checkbox]:checked + span {
+  text-decoration: line-through;
+  font-style: italic;
+  color: #8b8b8b; }
+
+.done-false {
+  margin-left: 10px; }
+
+#logo {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+  width: 50%;
+  height: auto; }
+
+#toggleButton {
+  float: right;
+  display: none; }
+
+.item-list:hover #toggleButton {
+  display: block;
+  margin-top: -9px;
+  padding: 10px 15px;
+  border: 0;
+  background-color: transparent; }
+
+footer {
+  background-color: rgba(255, 255, 255, 0.2);
+  position: fixed;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: white; }
+
+nav ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #464444; }
+  nav ul li {
+    padding: 0;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    margin: 0; }
+    nav ul li:hover {
+      background-color: #464444; }
+  nav ul li.right {
+    float: right; }
+  nav ul li.left {
+    margin-left: 30px;
+    line-height: 40px; }
+    nav ul li.left img {
+      width: 35%;
+      height: auto; }
+
+nav ul li {
+  border-bottom: 0px solid transparent; }
+
+#logout-button {
+  background-color: #EC644B;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 12px 35px;
+  text-decoration: none;
+  border-radius: 0;
+  overflow: hidden;
+  border: 0;
+  line-height: 16px; }
+  #logout-button:hover {
+    background-color: #C0392B;
+    border: 0; }
+
+#create-button {
+  background-color: #44c767;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 12px 35px;
+  text-decoration: none;
+  border-radius: 0;
+  overflow: hidden;
+  border: 0;
+  line-height: 16px; }
+  #create-button:hover {
+    background-color: #5cbf2a;
+    border: 0; }
+
+.user-total-lists {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 100px 20px 0;
+  width: 100%;
+  margin: 0 auto; }
+  .user-total-lists .user-lists {
+    flex: 1 0 25%;
+    box-sizing: border-box;
+    width: 33%;
+    height: auto;
+    margin: 10px;
+    border-bottom: 0; }
+    .user-total-lists .user-lists button {
+      border-radius: 3px;
+      background-color: white;
+      border: 1px solid transparent;
+      -webkit-box-shadow: 0px 5px 10px 0px #414040;
+      -moz-box-shadow: 0px 5px 10px 0px #414040;
+      box-shadow: 0px 5px 10px 0px #414040; }
+      .user-total-lists .user-lists button:hover {
+        border: 1px solid green; }
