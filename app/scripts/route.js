@@ -21,7 +21,7 @@ todoTogo.config(['$routeProvider', '$locationProvider', function($routeProvider,
 
   // Route for live view
   .when('/live', {
-    url: '/live/:uniqueID',
+    //url: '/live/:uniqueID',
     templateUrl: '/live.html',
     controller: 'liveController'
   })
