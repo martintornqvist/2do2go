@@ -3,13 +3,14 @@ todoTogo.controller('homeController', ['$scope', '$firebaseArray', 'ngDialog', '
 
             // Getting a Firebase reference
             allLists = new Firebase('https://todotogo.firebaseio.com/lists/');
+            //oneList = new Firebase('https://todotogo.firebaseio.com');
 
             // Create function for the modal
             $scope.create = function(){
-                      // Pushing a new list id to Firebase
-                        lists = allLists.push({
-                        name: 'new list'
-                      });
+                    // Pushing a new list id to Firebase
+                      lists = allLists.push({
+                      name: 'new list'
+                    });
                       // Fetches the created list UID
                       listUID = lists.key();
                       $rootScope.listUID = new Firebase('https://todotogo.firebaseio.com/lists/' + listUID);
