@@ -28,4 +28,7 @@ todoTogo.config(['$routeProvider', '$locationProvider', function($routeProvider,
 
   .otherwise({ redirectTo: '/home' });
 
+  // No hashbang
+  //$locationProvider.html5Mode(true);
+
 }]);
