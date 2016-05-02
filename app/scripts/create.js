@@ -1,8 +1,8 @@
-todoTogo.controller('createController', ['$scope', '$firebaseArray', '$location', '$firebaseObject', 'ngDialog', '$rootScope',
-      function($scope, $firebaseArray, $location, $firebaseObject, ngDialog, $rootScope){
+todoTogo.controller('createController', ['$scope', '$firebaseArray', '$location', '$firebaseObject', 'ngDialog', '$rootScope', '$routeParams',
+      function($scope, $firebaseArray, $location, $firebaseObject, ngDialog, $rootScope, $routeParams){
 
         // Add items to list
-        var addItems = new Firebase('https://todotogo.firebaseio.com/lists/' + listUID);
+        var addItems = new Firebase('https://todotogo.firebaseio.com/lists/' + random);
 
         // Start with empty array
         $scope.items = $firebaseArray(addItems);
@@ -44,24 +44,13 @@ todoTogo.controller('createController', ['$scope', '$firebaseArray', '$location'
         };
 
         $scope.share = function(){
-          letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-          uid_length = 6;
-          generator = function(){
-            random = '';
-            for(var i = 0; i < uid_length; i++){
-              random += letters.charAt(Math.floor(Math.random() * letters.length));
-            }
-            return random;
-          }
-          generator();
+
+          //listUID = random;
           console.log('this is the short uid for the link: ' + random);
-          listUID = random
-          var fb = new Firebase('https://todotogo.firebaseio.com/lists/' + listUID);
+          var fb = new Firebase('https://todotogo.firebaseio.com/lists/' + random);
           console.log('this is the complete link: ' + fb);
           //console.log('this is the UID for the list: ' + listUID);
+          console.log('this is the local link: file://localhost:3000/#/live/' + random);
 
         }
 }]);
-
-
-// https://todotogo.firebaseio.com/lists/-KGhqvLYXcIdYVTuNW2p
