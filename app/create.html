@@ -10,7 +10,7 @@
                    ng-keyup="addPost()"
                    ng-model="itemInput" />
                 <span class="input-group-btn">
-                    <button class="btn btn-success" type="button">Add!</button>
+                    <button class="btn btn-add" type="button">Add!</button>
                 </span>
         </div>
     </form>
@@ -28,6 +28,6 @@
                 <input class="edit" type="text" ng-model="item.name" ng-keyup="editOnEnter(item)"/>
             </li>
         </ul>
-        <button class="shareButton" ng-click="share()">SHARE!</button>
+        <button class="shareButton" ng-click="share()">Click to share!</button>
 
 </div>
