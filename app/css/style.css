@@ -76,7 +76,7 @@ header {
   background-color: #f2724f;
   cursor: pointer;
   color: #ffffff;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -84,7 +84,7 @@ header {
   text-decoration: none;
   border-radius: 3px;
   border: 0;
-  width: 20%; }
+  width: 25%; }
   .createButton:hover {
     background-color: #f58f63; }
 
@@ -114,22 +114,62 @@ header {
     border-bottom: 0; }
 
 .faqButton {
+  padding: 10px;
+  text-decoration: none; }
+  .faqButton p {
+    color: #f2724f;
+    border: 2px solid #f2724f;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: 600; }
+    .faqButton p:hover {
+      -webkit-transition: background-color .5s ease;
+      -moz-transition: background-color .5s ease;
+      -o-transition: background-color .5s ease;
+      -ms-transition: background-color .5s ease;
+      transition: background-color .5s ease;
+      border: 2px solid #f58f63;
+      background-color: rgba(245, 143, 99, 0.6);
+      color: white; }
+
+#faq-container {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: auto;
   padding: 20px;
-  text-decoration: none;
-  color: #111; }
-  .faqButton:hover {
-    text-decoration: underline; }
+  border-radius: 3px; }
 
 .faq-list {
-  text-align: left; }
+  width: 60%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: left;
+  padding: 20px 40px; }
   .faq-list li {
-    border: 0; }
+    color: white;
+    border: 0;
+    height: 20px;
+    margin: 10px; }
     .faq-list li:hover {
-      background-color: white; }
+      background-color: transparent; }
+  .faq-list h2 {
+    color: white; }
 
 .homeButton {
   text-decoration: none;
-  color: #111; }
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+  margin-top: 30px; }
   .homeButton:hover {
     text-decoration: underline; }
 
@@ -137,7 +177,7 @@ input.ng-invalid.ng-touched {
   border: 2px solid red; }
 
 input.ng-valid {
-  border: 2px solid green; }
+  border: 2px solid #4fc1b0; }
 
 input[disabled="disabled"] {
   opacity: 0.4;
@@ -195,7 +235,7 @@ input[disabled="disabled"] {
     color: white;
     margin-top: 0;
     font-size: 1.2em;
-    background-color: rebeccapurple; }
+    background-color: #19a4e1; }
 
 #item-container {
   position: relative;
@@ -203,32 +243,46 @@ input[disabled="disabled"] {
   width: 100%;
   height: auto;
   background-color: white;
-  border-radius: 3px 3px 0 0; }
+  border-radius: 3px 3px 0 0;
+  padding-bottom: 25px; }
+  #item-container h3 {
+    font-size: 1.2em;
+    padding: 20px;
+    color: white;
+    text-align: left;
+    background-color: #19a4e1;
+    margin-top: 0; }
+  #item-container .btn-add {
+    background-color: #4fc1b0;
+    color: white; }
+    #item-container .btn-add:hover {
+      background-color: #63d1c4; }
 
 .shareButton {
   text-align: center;
   margin-top: -10px;
-  margin-left: 20px;
-  width: 380px;
-  background-color: #44c7c3;
+  margin-left: 22px;
+  width: 90%;
+  background-color: #4fc1b0;
   cursor: pointer;
   color: #ffffff;
   font-family: Arial;
   font-size: 14px;
   padding: 10px 35px;
   text-decoration: none;
-  border-radius: 0 0 3px 3px;
   overflow: hidden;
-  position: fixed;
-  border: 0; }
+  position: static;
+  border: 0;
+  text-transform: uppercase; }
   .shareButton:hover {
-    background-color: #2a9bbf; }
+    background-color: #63d1c4; }
 
 #mainForm {
   text-align: center; }
   #mainForm .input-group {
     width: 90%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding-top: 20px; }
 
 ul {
   width: 90%;
@@ -253,20 +307,30 @@ ul li.editing .view {
   display: none; }
 
 ul li.editing .edit {
-  display: block;
+  margin-top: -6px;
+  margin-bottom: -6px;
+  margin-left: -57px;
+  display: inline-block;
   width: 75%;
-  padding: 0px 0 10px 10px;
+  padding: 5px 0 5px 10px;
   border-radius: 3px;
   border: 1px solid lightgrey; }
 
 input[type=checkbox]:checked + span {
   text-decoration: line-through;
   font-style: italic;
-  color: #8b8b8b;
+  color: #3bb19c;
   margin-left: 10px; }
+
+input[type=checkbox]:checked + #live-items {
+  color: #3bb19c; }
 
 .done-false {
   margin-left: 10px; }
+
+#live-items {
+  color: #ef553b;
+  font-size: 1.2em; }
 
 #logo {
   display: block;

@@ -74,7 +74,7 @@
   line-height: 1.5em;
   margin: 0 auto;
   max-width: 100%;
-  padding: 1em;
+  padding:0;
   position: relative;
   width: 450px;
   -webkit-box-shadow: 0px 5px 10px 0px rgba(65, 64, 64, 1);
@@ -93,7 +93,7 @@
 .ngdialog.ngdialog-theme-default .ngdialog-close:before {
   background: transparent;
   border-radius: 3px;
-  color: #bbb;
+  color: white;
   content: '\00D7';
   font-size: 26px;
   font-weight: 400;
@@ -108,7 +108,7 @@
 
 .ngdialog.ngdialog-theme-default .ngdialog-close:hover:before,
 .ngdialog.ngdialog-theme-default .ngdialog-close:active:before {
-  color: #777;
+  color: #111;
 }
 
 .ngdialog.ngdialog-theme-default .ngdialog-message {
