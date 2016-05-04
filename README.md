@@ -1,5 +1,5 @@
 # 2do2go
 
-Clone
-npm install
-gulp serve
+> Clone
+> npm install
+> gulp serve
