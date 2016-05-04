@@ -5,7 +5,7 @@
             <li ng-repeat="item in items" class="item-list">
               <label>
                 <input type="checkbox" ng-model="item.done" />
-                <span ng-model="item.done" class="done-{{item.done}}">{{item.name}}</span>
+                <span ng-model="item.done" class="done-{{item.done}}" id="live-items">{{item.name}}</span>
               </label>
             </li>
         </ul>
