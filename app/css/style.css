@@ -5,8 +5,32 @@ html, body {
   padding: 0; }
 
 body {
-  background: #cecece;
   font-family: 'open sans', arial, serif; }
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(2, 100, 133, 0.6);
+  overflow-x: hidden; }
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: url(images/background.jpg);
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100; }
 
 a:hover {
   text-decoration: none; }
@@ -21,6 +45,7 @@ header {
     height: auto; }
 
 #home-container {
+  text-transform: uppercase;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -30,33 +55,38 @@ header {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 30%;
+  width: 80%;
   height: auto;
-  background-color: white;
-  -webkit-box-shadow: 0px 5px 10px 0px #414040;
-  -moz-box-shadow: 0px 5px 10px 0px #414040;
-  box-shadow: 0px 5px 10px 0px #414040;
   padding: 20px;
   border-radius: 3px; }
-  #home-container h3 {
-    color: #111; }
-
-#buttons {
-  padding-top: 10px;
-  margin: 35px; }
+  #home-container h1 {
+    font-size: 4.4em;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px; }
+  #home-container p.info-text {
+    font-size: 1.8em;
+    font-style: italic;
+    font-weight: 100;
+    color: white;
+    text-transform: none;
+    margin-bottom: 50px; }
 
 .createButton {
-  background-color: #44c767;
+  background-color: #f2724f;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
-  font-size: 14px;
-  padding: 10px 40px;
+  font-size: 1.2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 50px;
   text-decoration: none;
-  border-radius: 3px; }
-
-.createButton:hover {
-  background-color: #5cbf2a; }
+  border-radius: 3px;
+  border: 0;
+  width: 20%; }
+  .createButton:hover {
+    background-color: #f58f63; }
 
 .signupButton {
   background-color: #44c7c3;
@@ -71,10 +101,6 @@ header {
 .signupButton:hover {
   background-color: #2a9bbf; }
 
-.info-text {
-  margin: 20px;
-  color: #cecece; }
-
 .bold {
   font-weight: 700; }
 
@@ -88,6 +114,7 @@ header {
     border-bottom: 0; }
 
 .faqButton {
+  padding: 20px;
   text-decoration: none;
   color: #111; }
   .faqButton:hover {
@@ -106,57 +133,6 @@ header {
   .homeButton:hover {
     text-decoration: underline; }
 
-#signup-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: 0 auto 50px;
-  padding-bottom: 30px;
-  width: 30%;
-  height: auto;
-  background-color: white;
-  -webkit-box-shadow: 0px 5px 10px 0px #414040;
-  -moz-box-shadow: 0px 5px 10px 0px #414040;
-  box-shadow: 0px 5px 10px 0px #414040;
-  border-radius: 3px; }
-  #signup-container h3 {
-    padding: 20px 5px;
-    text-align: center;
-    color: #cecece; }
-  #signup-container #buttons {
-    margin: 0; }
-    #signup-container #buttons .back-home {
-      float: right;
-      margin-right: 20px;
-      line-height: 40px;
-      color: black; }
-      #signup-container #buttons .back-home:hover {
-        text-decoration: underline; }
-
-#email, #name {
-  margin-bottom: 10px; }
-
-#buttons .signupButtonFinal {
-  margin-left: 20px;
-  background-color: #44c7c3;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 14px;
-  padding: 10px 35px;
-  text-decoration: none;
-  border-radius: 3px;
-  overflow: hidden;
-  position: relative;
-  border: 0; }
-  #buttons .signupButtonFinal:hover {
-    background-color: #2a9bbf; }
-
 input.ng-invalid.ng-touched {
   border: 2px solid red; }
 
@@ -167,58 +143,59 @@ input[disabled="disabled"] {
   opacity: 0.4;
   cursor: not-allowed; }
 
-#signBlock {
-  width: 100%;
-  text-align: center;
-  color: red; }
-
-#create-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+/*#create-container {
+  position:absolute;
+  top:50%;
+  left:50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  margin: 0 auto 50px;
-  padding-bottom: 30px;
-  width: 30%;
+  margin:0 auto 50px;
+  padding-bottom:30px;
+  width:30%;
+  height:auto;
+  background-color:white;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(65, 64, 64, 1);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(65, 64, 64, 1);
+  box-shadow: 0px 5px 10px 0px rgba(65, 64, 64, 1);
+  border-radius:3px;
+  h3 {
+    padding:20px 5px;
+    text-align:center;
+    color:#cecece;
+  }
+  #buttons {
+    margin:0;
+    .back-home {
+      float:right;
+      margin-right:20px;
+      color:black;
+      line-height:40px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+} */
+#live-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 30px auto 50px;
+  width: 90%;
   height: auto;
   background-color: white;
-  -webkit-box-shadow: 0px 5px 10px 0px #414040;
-  -moz-box-shadow: 0px 5px 10px 0px #414040;
-  box-shadow: 0px 5px 10px 0px #414040;
-  border-radius: 3px; }
-  #create-container h3 {
-    padding: 20px 5px;
-    text-align: center;
-    color: #cecece; }
-  #create-container #buttons {
-    margin: 0; }
-    #create-container #buttons .back-home {
-      float: right;
-      margin-right: 20px;
-      color: black;
-      line-height: 40px; }
-      #create-container #buttons .back-home:hover {
-        text-decoration: underline; }
-
-#buttons .loginButtonFinal {
-  margin-left: 20px;
-  background-color: #44c767;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 14px;
-  padding: 10px 35px;
-  text-decoration: none;
-  border-radius: 3px;
-  overflow: hidden;
-  position: relative;
-  border: 0; }
-  #buttons .loginButtonFinal:hover {
-    background-color: #5cbf2a; }
+  border-radius: 3px 3px 0 0; }
+  #live-container h3 {
+    padding: 20px;
+    text-align: left;
+    color: white;
+    margin-top: 0;
+    font-size: 1.2em;
+    background-color: rebeccapurple; }
 
 #item-container {
   position: relative;
@@ -227,10 +204,6 @@ input[disabled="disabled"] {
   height: auto;
   background-color: white;
   border-radius: 3px 3px 0 0; }
-  #item-container h3 {
-    padding: 20px 5px;
-    text-align: center;
-    color: #cecece; }
 
 .shareButton {
   text-align: center;
@@ -246,7 +219,8 @@ input[disabled="disabled"] {
   text-decoration: none;
   border-radius: 0 0 3px 3px;
   overflow: hidden;
-  position: fixed; }
+  position: fixed;
+  border: 0; }
   .shareButton:hover {
     background-color: #2a9bbf; }
 
@@ -265,7 +239,7 @@ ul {
 li {
   color: #4d4d4d;
   padding: 10px 0;
-  border-bottom: 1px solid #c2c2c2; }
+  border-bottom: 1px solid #efefef; }
   li:last-child {
     border-bottom: 0px solid transparent;
     padding-bottom: 10px; }
@@ -281,14 +255,15 @@ ul li.editing .view {
 ul li.editing .edit {
   display: block;
   width: 75%;
-  padding: 0 0 10px 10px;
+  padding: 0px 0 10px 10px;
   border-radius: 3px;
   border: 1px solid lightgrey; }
 
 input[type=checkbox]:checked + span {
   text-decoration: line-through;
   font-style: italic;
-  color: #8b8b8b; }
+  color: #8b8b8b;
+  margin-left: 10px; }
 
 .done-false {
   margin-left: 10px; }
@@ -316,59 +291,44 @@ footer {
   background-color: rgba(255, 255, 255, 0.2);
   position: fixed;
   bottom: 0;
-  margin: 0 auto;
+  left: 0;
+  margin: 100px auto 0;
   width: 100%;
   height: 40px;
   text-align: center;
   line-height: 40px;
   color: white; }
 
-nav ul {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 40px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #464444; }
-  nav ul li {
+nav {
+  position: absolute; }
+  nav ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    margin: 0; }
-    nav ul li:hover {
-      background-color: #464444; }
-  nav ul li.right {
-    float: right; }
-  nav ul li.left {
-    margin-left: 30px;
-    line-height: 40px; }
-    nav ul li.left img {
-      width: 35%;
-      height: auto; }
+    overflow: hidden; }
+    nav ul li {
+      padding: 20px 0;
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      margin: 0; }
+      nav ul li:hover {
+        background-color: transparent; }
+  nav li.right {
+    float: right;
+    padding: 20px 40px; }
+  nav li.left img {
+    padding-left: 25px;
+    width: 65%;
+    height: auto; }
 
 nav ul li {
   border-bottom: 0px solid transparent; }
-
-#logout-button {
-  background-color: #EC644B;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 14px;
-  padding: 12px 35px;
-  text-decoration: none;
-  border-radius: 0;
-  overflow: hidden;
-  border: 0;
-  line-height: 16px; }
-  #logout-button:hover {
-    background-color: #C0392B;
-    border: 0; }
 
 #create-button {
   background-color: #44c767;
