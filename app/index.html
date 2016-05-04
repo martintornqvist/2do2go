@@ -22,18 +22,29 @@
     <link rel="stylesheet" href="css/ngDialog.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li class="left"><a href="/"><img src="/images/logo_white.png" /></a></li>
-    </ul>
-  </nav>
+  <video autoplay loop poster="background.jpg" id="bgvid">
+    <source src="video/background.webm" type="video/webm"/>
+    <source src="video/background.mp4" type="video/webm" />
+  </video>
+  <div class="overlay">
+    <nav>
+      <ul>
+        <li class="left">
+          <a href="#home"><img src="/images/logo_white.png" /></a>
+        </li>
+        <li class="right">
+          <a href="#faq" class="faqButton"><p>How does it work?</p></a>
+        </li>
+      </ul>
+    </nav>
 
 <section ng-view></section>
-
 
 <footer>
   <span>Copyright and such</span>
 </footer>
+</div>
+
 
 
 
