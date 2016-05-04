@@ -1,11 +1,12 @@
-<div id="item-container"
+<div id="live-container"
      ng-controller="liveController">
-    <h3>Here's your shared list!</h3>
+    <h3>These are your shared items</h3>
         <ul>
             <li ng-repeat="item in items" class="item-list">
+              <label>
                 <input type="checkbox" ng-model="item.done" />
                 <span ng-model="item.done" class="done-{{item.done}}">{{item.name}}</span>
-                <input class="edit" type="text" ng-model="item.name" ng-keyup="editOnEnter(item)"/>
+              </label>
             </li>
         </ul>
 </div>
