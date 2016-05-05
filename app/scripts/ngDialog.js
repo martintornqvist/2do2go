@@ -46,7 +46,7 @@
             disableAnimation: false,
             plain: false,
             showClose: true,
-            closeByDocument: true,
+            //closeByDocument: true,
             closeByEscape: true,
             closeByNavigation: false,
             appendTo: false,
