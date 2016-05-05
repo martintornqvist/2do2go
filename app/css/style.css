@@ -35,15 +35,6 @@ video#bgvid {
 a:hover {
   text-decoration: none; }
 
-header {
-  padding: 0;
-  margin-top: 2%;
-  margin-left: 2%;
-  color: #f0efef; }
-  header img {
-    width: 100px;
-    height: auto; }
-
 #home-container {
   text-transform: uppercase;
   text-align: center;
@@ -58,7 +49,7 @@ header {
   width: 80%;
   height: auto;
   padding: 20px;
-  border-radius: 3px; }
+  border-radius: 5px; }
   #home-container h1 {
     font-size: 4.4em;
     font-weight: 700;
@@ -82,7 +73,7 @@ header {
   letter-spacing: 1px;
   padding: 15px 50px;
   text-decoration: none;
-  border-radius: 3px;
+  border-radius: 5px;
   border: 0;
   width: 25%; }
   .createButton:hover {
@@ -96,7 +87,7 @@ header {
   font-size: 14px;
   padding: 10px 35px;
   text-decoration: none;
-  border-radius: 3px; }
+  border-radius: 5px; }
 
 .signupButton:hover {
   background-color: #2a9bbf; }
@@ -117,10 +108,10 @@ header {
   padding: 10px;
   text-decoration: none; }
   .faqButton p {
-    color: #f2724f;
-    border: 2px solid #f2724f;
+    color: white;
+    border: 2px solid white;
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 5px;
     font-weight: 600; }
     .faqButton p:hover {
       -webkit-transition: background-color .5s ease;
@@ -128,9 +119,9 @@ header {
       -o-transition: background-color .5s ease;
       -ms-transition: background-color .5s ease;
       transition: background-color .5s ease;
-      border: 2px solid #f58f63;
-      background-color: rgba(245, 143, 99, 0.6);
-      color: white; }
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.6);
+      color: rgba(2, 100, 133, 0.6); }
 
 #faq-container {
   text-align: center;
@@ -145,7 +136,7 @@ header {
   width: 80%;
   height: auto;
   padding: 20px;
-  border-radius: 3px; }
+  border-radius: 5px; }
 
 .faq-list {
   width: 60%;
@@ -183,52 +174,18 @@ input[disabled="disabled"] {
   opacity: 0.4;
   cursor: not-allowed; }
 
-/*#create-container {
-  position:absolute;
-  top:50%;
-  left:50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin:0 auto 50px;
-  padding-bottom:30px;
-  width:30%;
-  height:auto;
-  background-color:white;
-  -webkit-box-shadow: 0px 5px 10px 0px rgba(65, 64, 64, 1);
-  -moz-box-shadow: 0px 5px 10px 0px rgba(65, 64, 64, 1);
-  box-shadow: 0px 5px 10px 0px rgba(65, 64, 64, 1);
-  border-radius:3px;
-  h3 {
-    padding:20px 5px;
-    text-align:center;
-    color:#cecece;
-  }
-  #buttons {
-    margin:0;
-    .back-home {
-      float:right;
-      margin-right:20px;
-      color:black;
-      line-height:40px;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-} */
 #live-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: hidden;
   margin: 30px auto 50px;
-  width: 90%;
+  width: 40%;
   height: auto;
   background-color: white;
-  border-radius: 3px 3px 0 0; }
+  border-radius: 5px;
+  padding-bottom: 60px; }
   #live-container h3 {
     padding: 20px;
     text-align: left;
@@ -236,14 +193,58 @@ input[disabled="disabled"] {
     margin-top: 0;
     font-size: 1.2em;
     background-color: #19a4e1; }
+  #live-container .btn-add {
+    background-color: #4fc1b0;
+    color: white; }
+    #live-container .btn-add:hover {
+      background-color: #63d1c4; }
+  #live-container .live-addicon-image {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    width: 30%;
+    height: auto; }
+
+.header {
+  z-index: 100;
+  position: relative; }
+
+.header .skew:before {
+  border-radius: 5px 5px 0 0;
+  content: '';
+  position: absolute;
+  margin-top: -15px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 250px;
+  background: #f2724f;
+  z-index: -1;
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+  -o-transform: skewY(-2deg);
+  transform: skewY(-2deg);
+  -webkit-backface-visibility: hidden; }
+
+.header-inner {
+  padding: 30px 30px 100px 30px; }
+  .header-inner .addicon-image {
+    display: block;
+    margin: 0 auto;
+    padding: 30px;
+    width: 40%;
+    height: auto; }
 
 #item-container {
   position: relative;
-  margin: 0 auto 50px;
+  margin: 0 auto 30px;
   width: 100%;
   height: auto;
   background-color: white;
-  border-radius: 3px 3px 0 0;
+  border-radius: 5px 5px 5px 5px;
   padding-bottom: 25px; }
   #item-container h3 {
     font-size: 1.2em;
@@ -251,7 +252,8 @@ input[disabled="disabled"] {
     color: white;
     text-align: left;
     background-color: #19a4e1;
-    margin-top: 0; }
+    margin-top: 0;
+    border-radius: 5px 5px 0 0; }
   #item-container .btn-add {
     background-color: #4fc1b0;
     color: white; }
@@ -259,10 +261,10 @@ input[disabled="disabled"] {
       background-color: #63d1c4; }
 
 .shareButton {
+  display: block;
+  margin: 30px auto 0px;
   text-align: center;
-  margin-top: -10px;
-  margin-left: 22px;
-  width: 90%;
+  width: 78%;
   background-color: #4fc1b0;
   cursor: pointer;
   color: #ffffff;
@@ -273,6 +275,7 @@ input[disabled="disabled"] {
   overflow: hidden;
   position: static;
   border: 0;
+  border-radius: 5px;
   text-transform: uppercase; }
   .shareButton:hover {
     background-color: #63d1c4; }
@@ -280,12 +283,12 @@ input[disabled="disabled"] {
 #mainForm {
   text-align: center; }
   #mainForm .input-group {
-    width: 90%;
+    width: 78%;
     margin: 0 auto;
     padding-top: 20px; }
 
 ul {
-  width: 90%;
+  width: 78%;
   margin: 0 auto;
   padding: 0;
   list-style-type: none; }
@@ -309,11 +312,11 @@ ul li.editing .view {
 ul li.editing .edit {
   margin-top: -6px;
   margin-bottom: -6px;
-  margin-left: -57px;
+  margin-left: -65px;
   display: inline-block;
-  width: 75%;
+  width: 200px;
   padding: 5px 0 5px 10px;
-  border-radius: 3px;
+  border-radius: 5px;
   border: 1px solid lightgrey; }
 
 input[type=checkbox]:checked + span {
@@ -393,43 +396,3 @@ nav {
 
 nav ul li {
   border-bottom: 0px solid transparent; }
-
-#create-button {
-  background-color: #44c767;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 14px;
-  padding: 12px 35px;
-  text-decoration: none;
-  border-radius: 0;
-  overflow: hidden;
-  border: 0;
-  line-height: 16px; }
-  #create-button:hover {
-    background-color: #5cbf2a;
-    border: 0; }
-
-.user-total-lists {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 100px 20px 0;
-  width: 100%;
-  margin: 0 auto; }
-  .user-total-lists .user-lists {
-    flex: 1 0 25%;
-    box-sizing: border-box;
-    width: 33%;
-    height: auto;
-    margin: 10px;
-    border-bottom: 0; }
-    .user-total-lists .user-lists button {
-      border-radius: 3px;
-      background-color: white;
-      border: 1px solid transparent;
-      -webkit-box-shadow: 0px 5px 10px 0px #414040;
-      -moz-box-shadow: 0px 5px 10px 0px #414040;
-      box-shadow: 0px 5px 10px 0px #414040; }
-      .user-total-lists .user-lists button:hover {
-        border: 1px solid green; }
