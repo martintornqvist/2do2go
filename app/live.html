@@ -1,3 +1,4 @@
+<!--
 <div id="live-container"
      ng-controller="liveController">
     <h3>These are your shared items</h3>
@@ -9,4 +10,49 @@
               </label>
             </li>
         </ul>
+</div>
+-->
+
+<!-- Container for listed items -->
+<div id="live-container"
+     ng-controller="liveController">
+  <header class="header" id="header">
+   <div class="skew">
+       <div class="header-inner">
+           <img class="live-addicon-image" src="images/addicon_white.svg" />
+       </div>
+   </div>
+ </header>
+
+
+    <!-- <h3>Go ahead, add something to your list!</h3> -->
+
+
+    <form id="mainForm">
+        <div class="input-group view">
+            <input type="text"
+                   class="form-control"
+                   placeholder="What do you want to add?"
+                   ng-keyup="addPost()"
+                   ng-model="itemInput" />
+                <span class="input-group-btn">
+                    <button class="btn btn-add" type="submit">Add!</button>
+                </span>
+        </div>
+    </form>
+        <ul>
+            <li ng-repeat="item in items" class="item-list">
+                <span ng-model="item.done" class="done-{{item.done}}">{{item.name}}</span>
+                <button type="button" class="btn btn-default btn-sm destroy" id="toggleButton" ng-click="removeItem($index, item)">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+
+                <button type="button" class="btn btn-default btn-sm destroy" id="toggleButton" ng-click="editMode()">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                </button>
+
+                <input class="edit" type="text" ng-model="item.name" ng-keyup="editOnEnter(item)"/>
+            </li>
+        </ul>
+        <button class="shareButton" ng-click="share()">Click to share!</button>
 </div>
