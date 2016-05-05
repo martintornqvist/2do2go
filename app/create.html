@@ -1,6 +1,16 @@
 <!-- Container for listed items -->
 <div id="item-container">
-    <h3>Go ahead, add something to your list!</h3>
+  <header class="header" id="header">
+   <div class="skew">
+       <div class="header-inner">
+           <img class="addicon-image" src="images/addicon_white.svg" />
+       </div>
+   </div>
+ </header>
+
+
+    <!-- <h3>Go ahead, add something to your list!</h3> -->
+
 
     <form id="mainForm">
         <div class="input-group view">
@@ -10,7 +20,7 @@
                    ng-keyup="addPost()"
                    ng-model="itemInput" />
                 <span class="input-group-btn">
-                    <button class="btn btn-add" type="button">Add!</button>
+                    <button class="btn btn-add" type="submit">Add!</button>
                 </span>
         </div>
     </form>
@@ -29,5 +39,4 @@
             </li>
         </ul>
         <button class="shareButton" ng-click="share()">Click to share!</button>
-
 </div>
