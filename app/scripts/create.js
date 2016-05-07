@@ -51,6 +51,11 @@ todoTogo.controller('createController', ['$scope', '$firebaseArray', '$location'
           console.log('this is the complete link: ' + fb);
           //console.log('this is the UID for the list: ' + listUID);
           console.log('this is the local link: file://localhost:3000/#/live/' + random);
-
+          ngDialog.open({
+            template:'url.html',
+            controller: 'createController',
+            scope: $scope,
+            className:'ngdialog-theme-default'
+          });
         }
 }]);

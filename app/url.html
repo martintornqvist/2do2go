@@ -1,0 +1,12 @@
+<div class="url-display-box">
+  <header class="header" id="header">
+   <div class="skew">
+       <div class="header-inner">
+           <img class="addicon-image" src="images/addicon_white.svg" />
+       </div>
+   </div>
+ </header>
+  <p class="url-display" ng-repeat="lists in items">
+    URL generated is <a href="https://localhost:3000/#/live/" + {{lists.$value}}>https://localhost:3000/#/live/{{lists.$value}}</a>
+  </p>
+</div>
