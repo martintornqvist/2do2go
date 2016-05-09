@@ -12,13 +12,14 @@
     <!-- <h3>Go ahead, add something to your list!</h3> -->
 
 
-    <form id="mainForm">
+    <form id="mainForm" ng-submit="addPostButton()">
         <div class="input-group view">
             <input type="text"
                    class="form-control"
                    placeholder="What do you want to add?"
                    ng-keyup="addPost()"
-                   ng-model="itemInput" />
+                   ng-model="itemInput"
+                   autofocus />
                 <span class="input-group-btn">
                     <button class="btn btn-add" type="submit">Add!</button>
                 </span>

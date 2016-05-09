@@ -25,6 +25,12 @@ todoTogo.controller('createController', ['$scope', '$firebaseArray', '$location'
             }
         },
 
+        $scope.addPostButton = function(){
+          if($scope.itemInput != ""){
+            $scope.addItem();
+          }
+        }
+
         // Remove item from scope
         $scope.removeItem = function(index, item){
             if(item.id === undefined)
