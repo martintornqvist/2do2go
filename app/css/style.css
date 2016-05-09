@@ -322,6 +322,8 @@ body {
       text-align: center;
       border: 2px solid #63d1c4;
       border-radius: 5px; }
+    .url-display-box p:nth-child(n+3) {
+      display: none; }
   .ngdialog.ngdialog-theme-default {
     padding-top: 0 !important; }
   footer {

@@ -421,6 +421,9 @@ body {
        border:2px solid $lightgreen;
        border-radius:5px;
      }
+       p:nth-child(n+3){
+         display:none;
+      }
    }
    .ngdialog.ngdialog-theme-default {
      padding-top:0 !important;
