@@ -3,7 +3,6 @@ todoTogo.controller('homeController', ['$scope', '$firebaseArray', 'ngDialog', '
 
             // Getting a Firebase reference
             allLists = new Firebase('https://todotogo.firebaseio.com/lists/');
-            //oneList = new Firebase('https://todotogo.firebaseio.com');
 
             // Create function for the modal
             $scope.createe = function(){
@@ -49,7 +48,7 @@ todoTogo.controller('homeController', ['$scope', '$firebaseArray', 'ngDialog', '
               var lists = new Firebase('https://todotogo.firebaseio.com/lists/' + random);
               firebaseLists = $firebaseArray(lists);
 
-              lists.child(random).set(random);
+              //lists.child(random).set(random);
               firebaseLists.$add(random).then(function(lists){
               })
 
