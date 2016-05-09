@@ -7,6 +7,6 @@
    </div>
  </header>
   <p class="url-display" ng-repeat="lists in items">
-    URL generated is <a href="https://localhost:3000/#/live/" + {{lists.$value}}>https://localhost:3000/#/live/{{lists.$value}}</a>
+    URL generated is <a ng-href="https://localhost:3000/#/live/{{lists.$value}}">https://localhost:3000/#/live/{{lists.$value}}</a>
   </p>
 </div>
