@@ -173,6 +173,7 @@ body {
      -ms-transform: translate(-50%, -50%);
      -o-transform: translate(-50%, -50%);
      transform: translate(-50%, -50%);
+     border-radius:5px;
      p {
        color:white;
        padding:0;
@@ -273,8 +274,8 @@ body {
      .addicon-image {
        display:block;
        margin:0 auto;
-       //padding:30px;
-       width:60%;
+       padding-top:25px;
+       width:40%;
        height:auto;
      }
    }
@@ -409,11 +410,12 @@ body {
    .url-display-box {
      height:100%;
      width:100%;
-     padding-bottom:200px;
+     padding-bottom:100px;
      .url-display {
+       padding:5px;
        height:80%;
        width:80%;
-       margin:0 auto;
+       margin:50px auto 0;
        display:block;
        text-align:center;
        border:2px solid $lightgreen;
@@ -582,6 +584,14 @@ body {
     width:65%;
     padding:30px 30px 40px 30px;
   }
+  .header-inner .addicon-image {
+    padding-top:0;
+    padding-bottom:50px;
+    width:35%;
+  }
+  .ngdialog.ngdialog-theme-default {
+    padding-top:160px !important;
+  }
  }
 
  /* Medium Devices, Desktops */
@@ -596,7 +606,7 @@ body {
      width:25%;
    }
    .faqButton p {
-     width:50%;
+     width:70%;
    }
 
  }
