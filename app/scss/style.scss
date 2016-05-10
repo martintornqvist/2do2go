@@ -363,14 +363,15 @@ body {
        display: none;
    }
    ul li.editing .edit {
-       margin-top:-6px;
+       margin-top:-29px;
        margin-bottom:-6px;
-       margin-left:-65px;
-       display:inline-block;
-       width: 200px;
-       padding: 5px 0 5px 10px;
        border-radius:5px;
        border:1px solid lightgrey;
+       position:relative;
+       display:block;
+       width:75%;
+       padding:5px 0 5px 10px;
+
    }
    input[type=checkbox]:checked + span {
      text-decoration: line-through;
