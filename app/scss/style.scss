@@ -400,6 +400,7 @@ body {
      font-style:italic;
      color: $darkgreen;
      margin-left:10px;
+     font-weight:600;
    }
    input[type=checkbox]:checked + #live-items {
      color:$darkgreen;
@@ -447,14 +448,26 @@ body {
        border:2px solid $lightgreen;
        border-radius:5px;
      }
-       p:nth-child(n+3){
-         display:none;
+      p:nth-child(n+3){
+        display:none;
       }
    }
    .ngdialog.ngdialog-theme-default {
      padding-top:0 !important;
    }
-
+   .url-display {
+     padding:5px;
+     height:80%;
+     width:80%;
+     margin:50px auto 0;
+     display:block;
+     text-align:center;
+     border:2px solid $lightgreen;
+     border-radius:5px;
+   }
+   p.url-display:nth-child(n+2){
+    display:none;
+  }
 
    //
    // FOOTER

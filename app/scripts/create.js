@@ -50,18 +50,14 @@ todoTogo.controller('createController', ['$scope', '$firebaseArray', '$location'
         };
 
         $scope.share = function(){
-
-          //listUID = random;
-          console.log('this is the short uid for the link: ' + random);
           var fb = new Firebase('https://todotogo.firebaseio.com/lists/' + random);
-          console.log('this is the complete link: ' + fb);
-          //console.log('this is the UID for the list: ' + listUID);
+          console.log('this is the complete link to db: ' + fb);
           console.log('this is the local link: file://localhost:3000/#/live/' + random);
-          ngDialog.open({
+          /*ngDialog.open({
             template:'url.html',
             controller: 'createController',
             scope: $scope,
             className:'ngdialog-theme-default'
-          });
+          });*/
         }
 }]);

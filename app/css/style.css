@@ -302,7 +302,8 @@ body {
     text-decoration: line-through;
     font-style: italic;
     color: #3bb19c;
-    margin-left: 10px; }
+    margin-left: 10px;
+    font-weight: 600; }
   input[type=checkbox]:checked + #live-items {
     color: #3bb19c; }
   .done-false {
@@ -345,6 +346,17 @@ body {
       display: none; }
   .ngdialog.ngdialog-theme-default {
     padding-top: 0 !important; }
+  .url-display {
+    padding: 5px;
+    height: 80%;
+    width: 80%;
+    margin: 50px auto 0;
+    display: block;
+    text-align: center;
+    border: 2px solid #63d1c4;
+    border-radius: 5px; }
+  p.url-display:nth-child(n+2) {
+    display: none; }
   footer {
     background-color: rgba(255, 255, 255, 0.2);
     position: fixed;
