@@ -26,7 +26,7 @@
         </div>
     </form>
         <ul>
-            <li ng-repeat="item in items" class="item-list">
+            <li ng-repeat="item in items" class="item-list fade">
                 <span ng-model="item.done" class="done-{{item.done}}">{{item.name}}</span>
                 <button type="button" class="btn btn-default btn-sm destroy" id="toggleButton" ng-click="removeItem($index, item)">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
@@ -40,5 +40,4 @@
             </li>
         </ul>
         <button class="shareButton" ng-click="share()">Click to share!</button>
-
 </div>
