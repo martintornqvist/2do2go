@@ -26,7 +26,7 @@
         </div>
     </form>
         <ul>
-            <li ng-repeat="item in items" class="item-list">
+            <li ng-repeat="item in items" class="item-list fade">
                 <input type="checkbox" ng-model="item.done" />
                 <span ng-model="item.done" class="done-{{item.done}}">{{item.name}}</span>
                 <button type="button" class="btn btn-default btn-sm destroy" id="toggleButton" ng-click="removeItem($index, item)">
