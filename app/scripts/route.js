@@ -8,6 +8,11 @@ todoTogo.config(['$routeProvider', '$locationProvider', function($routeProvider,
     controller: 'homeController'
   })
 
+  .when('/home/:random', {
+    templateUrl: '/create.html',
+    controller: 'liveController'
+  })
+
   // Route for FAQ page
   .when('/faq', {
     templateUrl: '/faq.html'

@@ -47,10 +47,8 @@ todoTogo.controller('homeController', ['$scope', '$firebaseArray', 'ngDialog', '
 
               var lists = new Firebase('https://todotogo.firebaseio.com/lists/' + random);
               firebaseLists = $firebaseArray(lists);
-
               //lists.child(random).set(random);
-              firebaseLists.$add(random).then(function(lists){
-              })
+              firebaseLists.$add(random).then(function(lists){});
 
               // Runs the ngDialog scheme with template etc
               ngDialog.open({

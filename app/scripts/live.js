@@ -9,7 +9,7 @@ todoTogo.controller('liveController', ['$scope', '$firebaseArray', '$location', 
         // Function for adding new items to parent list at Firebase
         // Add items to list
         // TEMP TO SEE IF IT WORKS
-        var addItems = new Firebase('https://todotogo.firebaseio.com/lists/' + $routeParams.random);
+        var addItems = new Firebase('//todotogo.firebaseio.com/lists/' + $routeParams.random);
 
         // Start with empty array
         $scope.items = $firebaseArray(addItems);
@@ -48,8 +48,4 @@ todoTogo.controller('liveController', ['$scope', '$firebaseArray', '$location', 
             $scope.items.$save(item);
           }
         };
-
 }]);
-
-
-// 7Mouzw
