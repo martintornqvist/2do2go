@@ -9,8 +9,8 @@ body {
 
 .fade {
   opacity: 1;
-  transition: 1s linear all;
-  -webkit-transition: 1s linear all; }
+  transition: 2s linear all;
+  -webkit-transition: 2s linear all; }
 
 .fade.ng-enter {
   opacity: 0; }
