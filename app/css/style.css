@@ -7,6 +7,34 @@ html, body {
 body {
   font-family: 'open sans', arial, serif; }
 
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(2, 100, 133, 0.6);
+  overflow-x: hidden; }
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: url(../images/background.png);
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100; }
+
+a:hover {
+  text-decoration: none; }
+
 .fade {
   opacity: 1;
   transition: 1s linear all;
@@ -26,31 +54,6 @@ body {
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) {
-  .overlay {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: rgba(2, 100, 133, 0.6);
-    overflow-x: hidden; }
-  video#bgvid {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background: url(../images/background.png);
-    background-size: cover;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100; }
-  a:hover {
-    text-decoration: none; }
   #home-container {
     text-transform: uppercase;
     text-align: center;
@@ -172,7 +175,7 @@ body {
     transform: translate(-50%, -50%);
     overflow: hidden;
     margin: 30px auto 50px;
-    width: 40%;
+    width: 100%;
     height: auto;
     background-color: white;
     border-radius: 5px;
@@ -193,7 +196,7 @@ body {
       display: block;
       margin: 0 auto;
       padding: 20px;
-      width: 30%;
+      width: 60%;
       height: auto; }
   .header {
     z-index: 100;
@@ -208,7 +211,7 @@ body {
     bottom: 0;
     overflow: hidden;
     width: 100%;
-    height: 250px;
+    height: 290px;
     background: #f2724f;
     z-index: -1;
     -webkit-transform: skewY(-2deg);
@@ -237,8 +240,7 @@ body {
       font-size: 1.2em;
       padding: 20px;
       color: white;
-      text-align: left;
-      background-color: #19a4e1;
+      text-align: center;
       margin-top: 0;
       border-radius: 5px 5px 0 0; }
     #item-container .btn-add {
@@ -296,7 +298,7 @@ body {
     border: 1px solid lightgrey;
     position: relative;
     display: block;
-    width: 75%;
+    width: 70%;
     padding: 5px 0 5px 10px; }
   input[type=checkbox]:checked + span {
     text-decoration: line-through;
@@ -306,11 +308,10 @@ body {
     font-weight: 600; }
   input[type=checkbox]:checked + #live-items {
     color: #3bb19c; }
+  input[type=checkbox]:checked + label {
+    background-color: red; }
   .done-false {
     margin-left: 10px; }
-  #live-items {
-    color: #ef553b;
-    font-size: 1.2em; }
   #logo {
     display: block;
     margin: 0 auto;
@@ -329,21 +330,6 @@ body {
     background-color: transparent; }
   .item-list:nth-child(1) {
     display: none; }
-  .url-display-box {
-    height: 100%;
-    width: 100%;
-    padding-bottom: 100px; }
-    .url-display-box .url-display {
-      padding: 5px;
-      height: 80%;
-      width: 80%;
-      margin: 50px auto 0;
-      display: block;
-      text-align: center;
-      border: 2px solid #63d1c4;
-      border-radius: 5px; }
-    .url-display-box p:nth-child(n+3) {
-      display: none; }
   .ngdialog.ngdialog-theme-default {
     padding-top: 0 !important; }
   .url-display {
@@ -354,7 +340,8 @@ body {
     display: block;
     text-align: center;
     border: 2px solid #63d1c4;
-    border-radius: 5px; }
+    border-radius: 5px;
+    text-transform: none; }
   p.url-display:nth-child(n+2) {
     display: none; }
   footer {
@@ -412,9 +399,11 @@ body {
     font-size: 1em;
     padding: 15px 25px; }
   #live-container .live-addicon-image {
-    width: 30%; }
+    width: 35%;
+    padding: 0; }
   .header-inner {
-    padding: 30px; }
+    padding: 50px;
+    margin-bottom: 20px; }
   #home-container h1 {
     font-size: 3em;
     text-align: center;
@@ -434,8 +423,8 @@ body {
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
   #live-container {
-    width: 50%;
-    padding-bottom: 0; }
+    width: 80%;
+    padding-bottom: 35px; }
     #live-container .live-addicon-image {
       margin: 5px auto;
       width: 30%; }
@@ -460,7 +449,6 @@ body {
     padding: 30px 30px 40px 30px; }
   .header-inner .addicon-image {
     padding-top: 0;
-    padding-bottom: 50px;
     width: 35%; }
   .ngdialog.ngdialog-theme-default {
     padding-top: 160px !important; } }
@@ -474,7 +462,9 @@ body {
   nav li.right {
     width: 25%; }
   .faqButton p {
-    width: 70%; } }
+    width: 70%; }
+  #live-container {
+    width: 60%; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {

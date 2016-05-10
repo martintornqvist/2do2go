@@ -22,6 +22,37 @@ html, body {
 body {
   font-family: 'open sans', arial, serif;
 }
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    //background-color: rgba(25,164,225, 0.8);
+    //background-color:rgba(43, 200,237, 0.8);
+    //background-color:rgba(34,188,231, 0.5);
+    background-color:rgba(2,100,133,0.6);
+    overflow-x: hidden;
+}
+video#bgvid {
+  position:fixed;
+  top:50%;
+  left:50%;
+  -ms-transform:translate(-50%, -50%);
+  -moz-transform:translate(-50%, -50%);
+  -webkit-transform:translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background:url(../images/background.png);
+  background-size:cover;
+  min-width:100%;
+  min-height:100%;
+  width:auto;
+  height:auto;
+  z-index:-100;
+}
+a:hover {
+  text-decoration:none;
+}
 
 //
 // ANIMATIONS
@@ -50,39 +81,6 @@ body {
 
 /* Custom, iPhone Retina */
  @media only screen and (min-width : 320px) {
-   .overlay {
-       height: 100%;
-       width: 100%;
-       position: fixed;
-       left: 0;
-       top: 0;
-       //background-color: rgba(25,164,225, 0.8);
-       //background-color:rgba(43, 200,237, 0.8);
-       //background-color:rgba(34,188,231, 0.5);
-       background-color:rgba(2,100,133,0.6);
-       overflow-x: hidden;
-   }
-   video#bgvid {
-     position:fixed;
-     top:50%;
-     left:50%;
-     -ms-transform:translate(-50%, -50%);
-     -moz-transform:translate(-50%, -50%);
-     -webkit-transform:translate(-50%, -50%);
-     transform: translate(-50%, -50%);
-     background:url(../images/background.png);
-     background-size:cover;
-     min-width:100%;
-     min-height:100%;
-     width:auto;
-     height:auto;
-     z-index:-100;
-   }
-   a:hover {
-     text-decoration:none;
-   }
-
-
    //
    // HOME
    //
@@ -238,7 +236,7 @@ body {
      transform:translate(-50%, -50%);
      overflow:hidden;
      margin:30px auto 50px;
-     width:40%;
+     width:100%;
      height:auto;
      background-color:white;
      border-radius:5px;
@@ -262,7 +260,7 @@ body {
        display:block;
        margin:0 auto;
        padding:20px;
-       width:30%;
+       width:60%;
        height:auto;
      }
    }
@@ -281,7 +279,7 @@ body {
      bottom: 0;
      overflow: hidden;
      width: 100%;
-     height: 250px;
+     height: 290px;
      background:$middlered;
      z-index: -1;
      -webkit-transform: skewY(-2deg);
@@ -318,8 +316,7 @@ body {
        font-size:1.2em;
        padding:20px;
        color:white;
-       text-align:left;
-       background-color:$darkblue;
+       text-align:center;
        margin-top:0;
        border-radius:5px 5px 0 0;
      }
@@ -391,7 +388,7 @@ body {
        border:1px solid lightgrey;
        position:relative;
        display:block;
-       width:75%;
+       width:70%;
        padding:5px 0 5px 10px;
 
    }
@@ -405,12 +402,11 @@ body {
    input[type=checkbox]:checked + #live-items {
      color:$darkgreen;
    }
+   input[type=checkbox]:checked + label {
+     background-color:red;
+   }
    .done-false {
      margin-left:10px;
-   }
-   #live-items {
-     color:$darkred;
-     font-size:1.2em;
    }
    #logo {
      display:block;
@@ -434,24 +430,6 @@ body {
    .item-list:nth-child(1) {
      display:none;
    }
-   .url-display-box {
-     height:100%;
-     width:100%;
-     padding-bottom:100px;
-     .url-display {
-       padding:5px;
-       height:80%;
-       width:80%;
-       margin:50px auto 0;
-       display:block;
-       text-align:center;
-       border:2px solid $lightgreen;
-       border-radius:5px;
-     }
-      p:nth-child(n+3){
-        display:none;
-      }
-   }
    .ngdialog.ngdialog-theme-default {
      padding-top:0 !important;
    }
@@ -464,6 +442,7 @@ body {
      text-align:center;
      border:2px solid $lightgreen;
      border-radius:5px;
+     text-transform:none;
    }
    p.url-display:nth-child(n+2){
     display:none;
@@ -552,10 +531,12 @@ body {
      padding:15px 25px;
    }
    #live-container .live-addicon-image {
-     width:30%;
+     width:35%;
+     padding:0;
    }
    .header-inner {
-     padding:30px;
+     padding:50px;
+     margin-bottom:20px;
    }
    #home-container {
      h1 {
@@ -584,8 +565,8 @@ body {
  /* Small Devices, Tablets */
  @media only screen and (min-width : 768px) {
    #live-container {
-     width:50%;
-     padding-bottom:0;
+     width:80%;
+     padding-bottom:35px;
      //margin:-15px auto 50px;
      .live-addicon-image {
        margin:5px auto;
@@ -627,7 +608,7 @@ body {
   }
   .header-inner .addicon-image {
     padding-top:0;
-    padding-bottom:50px;
+    //padding-bottom:50px;
     width:35%;
   }
   .ngdialog.ngdialog-theme-default {
@@ -648,6 +629,9 @@ body {
    }
    .faqButton p {
      width:70%;
+   }
+   #live-container {
+     width:60%;
    }
 
  }
