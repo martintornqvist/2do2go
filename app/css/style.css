@@ -206,7 +206,7 @@ a:hover {
     border-radius: 5px 5px 0 0;
     content: '';
     position: absolute;
-    margin-top: -15px;
+    margin-top: -20px;
     top: 0;
     left: 0;
     bottom: 0;
@@ -397,6 +397,7 @@ a:hover {
 @media only screen and (min-width: 480px) {
   #live-container {
     width: 100%;
+    height: 100%;
     margin: 0 auto 50px; }
   .createButton {
     width: 100%;
@@ -428,10 +429,11 @@ a:hover {
 @media only screen and (min-width: 768px) {
   #live-container {
     width: 80%;
+    height: 100%;
     padding-bottom: 35px; }
     #live-container .live-addicon-image {
       margin: 5px auto;
-      width: 30%; }
+      width: 25%; }
   #home-container h1 {
     font-size: 3.4em; }
   nav li.left {
@@ -453,14 +455,16 @@ a:hover {
     padding: 30px 30px 40px 30px; }
   .header-inner .addicon-image {
     padding-top: 0;
-    width: 35%; }
+    width: 25%; }
   .ngdialog.ngdialog-theme-default {
-    padding-top: 160px !important; } }
+    padding-top: 160px !important; }
+  .header .skew:before {
+    margin-top: -20px; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
   .live-addicon-image {
-    width: 30%; }
+    width: 25%; }
   .createButton {
     width: 35%; }
   nav li.right {
@@ -468,7 +472,8 @@ a:hover {
   .faqButton p {
     width: 70%; }
   #live-container {
-    width: 60%; } }
+    width: 60%;
+    height: 100%; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
@@ -477,4 +482,5 @@ a:hover {
     font-size: 1.1em;
     padding: 15px 50px; }
   #live-container {
-    width: 50%; } }
+    width: 50%;
+    height: 100%; } }
