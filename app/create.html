@@ -39,9 +39,9 @@
                 <input class="edit" type="text" ng-model="item.name" ng-keyup="editOnEnter(item)"/>
             </li>
         </ul>
-        <button class="shareButton" ng-click="showDetails = ! showDetails">Click to share!
+        <button class="shareButton" ng-click="showDetails = ! showDetails">Generate link to share!
           <p class="url-display" ng-repeat="item in items" ng-class="{ 'hidden': ! showDetails }">
-            URL generated is <a ng-href="//localhost:3000/#/live/{{item.$value}}" target="_blank">//localhost:3000/#/live/{{item.$value}}</a>
+            <a ng-href="http://mtornqvist.se/2do2go/#/live/{{item.$value}}" target="_blank">http://mtornqvist.se/2do2go/#/live/{{item.$value}}</a>
           </p>
         </button>
 

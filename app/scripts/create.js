@@ -29,7 +29,7 @@ todoTogo.controller('createController', ['$scope', '$firebaseArray', '$location'
           if($scope.itemInput != ""){
             $scope.addItem();
           }
-        }
+        },
 
         // Remove item from scope
         $scope.removeItem = function(index, item){
@@ -48,16 +48,4 @@ todoTogo.controller('createController', ['$scope', '$firebaseArray', '$location'
             $scope.items.$save(item);
           }
         };
-
-        $scope.share = function(){
-          var fb = new Firebase('https://todotogo.firebaseio.com/lists/' + random);
-          console.log('this is the complete link to db: ' + fb);
-          console.log('this is the local link: file://localhost:3000/#/live/' + random);
-          /*ngDialog.open({
-            template:'url.html',
-            controller: 'createController',
-            scope: $scope,
-            className:'ngdialog-theme-default'
-          });*/
-        }
 }]);
