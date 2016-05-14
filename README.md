@@ -1,4 +1,5 @@
 # 2do2go
+A quick and easy way to create and share lists to those who are out and about.
 
 
 > **Clone** <br />
