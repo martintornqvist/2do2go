@@ -8,3 +8,7 @@ Clone the repository <br /> <br />
 Fetch all the neccessary plugins from package.json <br /> <br />
 > **gulp serve** <br />
 Run the local server on localhost:3000
+
+
+# Demo
+www.mtornqvist.se/2do2go
